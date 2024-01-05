@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+:root{
+    --color-60: #FC3A3C;
+    --color-30: #F88980;
+    --color-10: #000000;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Patrick Hand', cursive;
+    outline: none;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box{
+    width: 500px;
+    border: 1px solid var(--color-60);
+    border-radius: 20px;
+    padding: 50px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.midia-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.midia-box > .cute-gif, .cute-music{
+    width: 300px;
+}
+
+.midia-box > .cute-music{
+    display: none;
+}
+
+.button-box{
+    width: 250px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-box > div {
+    width: 100px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: var(--color-10);
+    background-color: var(--color-30);
+    transition: 0.2s;
+}
+
+button[class="btn-yes"]:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+button[class="btn-no"] {
+    position: absolute;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 550px){
+    .content-box {
+        width: 70vw;
+        height: auto; 
+    }
+
+    .midia-box > .cute-gif, .cute-music {
+        width: 200px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    .button-box{
+        gap: 15px;
+    }
+
+    button {
+        border-radius: 10px;
+    }
+
+}
